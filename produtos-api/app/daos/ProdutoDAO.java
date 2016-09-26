@@ -29,4 +29,11 @@ public class ProdutoDAO {
 		return produtos.where().eq("tipo", tipo).findList();
 	}
 
+	public List<Produto> comFiltro(Map<String, String> parametros) {
+		ExpressionList<Produto> consulta = produtos.where();
+		parametros.entrySet().forEach(entrada -> {
+			consulta.eq(entrada.getKey(), entrada.getValue());
+		});
+		return consulta.findList();
+	}
 }
