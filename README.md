@@ -13,3 +13,4 @@
 4. Validação e notificações
   1. Validações no controller
   2. Refactor: ValidadorDeProdutos e Optionals
+  3. Flash messages
