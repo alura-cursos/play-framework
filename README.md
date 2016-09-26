@@ -16,3 +16,4 @@
   3. Flash messages
 5. API e filtros de consulta
   1. API com produtos em JSON
+  2. Filtro por tipo
