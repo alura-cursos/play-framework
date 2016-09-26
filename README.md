@@ -14,3 +14,5 @@
   1. Validações no controller
   2. Refactor: ValidadorDeProdutos e Optionals
   3. Flash messages
+5. API e filtros de consulta
+  1. API com produtos em JSON

@@ -1,5 +1,6 @@
 package daos;
 
+import java.util.List;
 import java.util.Optional;
 
 import com.avaje.ebean.Finder;
@@ -15,5 +16,9 @@ public class ProdutoDAO {
 				.eq("codigo", codigo)
 				.findUnique();
 		return Optional.ofNullable(produto);
+	}
+
+	public List<Produto> todos() {
+		return produtos.all();
 	}
 }
