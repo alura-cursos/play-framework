@@ -16,7 +16,8 @@ public class ProdutoController extends Controller {
 	public Result salvaNovoProduto() {
 		Form<Produto> formulario = formularios.form(Produto.class).bindFromRequest();
 		Produto produto = formulario.get();
-		return ok("Formulario recebido para o produto: "+produto.getTitulo());
+		produto.save();
+		return redirect(routes.ProdutoController.formularioDeNovoProduto());
 	}
 
 	public Result formularioDeNovoProduto() {

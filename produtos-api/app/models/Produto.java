@@ -1,6 +1,11 @@
 package models;
 
-public class Produto {
+import javax.persistence.Entity;
+
+import com.avaje.ebean.Model;
+
+@Entity
+public class Produto extends Model {
 
 	private String titulo;
 	private String codigo;
