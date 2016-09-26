@@ -1,18 +1,13 @@
-@(message: String)
+@(formulario: Form[Produto])
 
 @main("Welcome to Play") {
-	<form action="/produto/novo" method="post">
+	@helper.form(routes.ProdutoController.salvaNovoProduto) {
 		<h1>Cadastro de produto</h1>
-		<label for="titulo">Título</label>
-		<input type="text" name="titulo" id="titulo">
-		<label for="codigo">Código único</label>
-		<input type="text" name="codigo" id="codigo">
-		<label for="tipo">Tipo</label>
-		<input type="text" name="tipo" id="tipo">
-		<label for="descricao">Descrição</label>
-		<textarea name="descricao" id="descricao"></textarea>
-		<label for="preco">Preço</label>
-		<input type="number" name="preco" id="preco">
+		@helper.inputText(formulario("titulo"))
+		@helper.inputText(formulario("codigo"))
+		@helper.inputText(formulario("tipo"))
+		@helper.textarea(formulario("descricao"))
+		@helper.inputText(formulario("preco"), 'type -> "number")
 		<input type="submit" value="Cadastrar">
-	</form>
+	}
 }
