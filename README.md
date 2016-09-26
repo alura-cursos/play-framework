@@ -5,3 +5,4 @@
 1. Instalação
 2. Rotas, views, modelos e banco de dados
   1. Formulário de produto
+  2. Modelo de produto e fábrica de formulários
