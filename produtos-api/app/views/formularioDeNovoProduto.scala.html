@@ -1,13 +1,15 @@
 @(formulario: Form[Produto])
 
+@import b3.vertical.fieldConstructor
+
 @main("Welcome to Play") {
-	@helper.form(routes.ProdutoController.salvaNovoProduto) {
+	@b3.form(routes.ProdutoController.salvaNovoProduto) {
 		<h1>Cadastro de produto</h1>
-		@helper.inputText(formulario("titulo"))
-		@helper.inputText(formulario("codigo"))
-		@helper.inputText(formulario("tipo"))
-		@helper.textarea(formulario("descricao"))
-		@helper.inputText(formulario("preco"), 'type -> "number")
-		<input type="submit" value="Cadastrar">
-	}
+		@b3.text(formulario("titulo"), '_label -> "Título")
+		@b3.text(formulario("codigo"), '_label -> "Código")
+		@b3.text(formulario("tipo"), '_label -> "Tipo")
+		@b3.textarea(formulario("descricao"), '_label -> "Descrição")
+		@b3.number(formulario("preco"), '_label -> "Preço")
+		@b3.submit('class -> "btn btn-primary") { Cadastrar }
+	}	
 }
